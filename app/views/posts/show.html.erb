@@ -1,5 +1,5 @@
 
-<h3>Posted: <%= @post.created_at.strftime('%x') %>
+<h3>Posted: <%= @post.created_at.strftime('%x') %></h3>
 <p>
   <strong>Title:</strong>
   <%= @post.title %>
@@ -7,14 +7,14 @@
 
 <p>
   <strong>Author:</strong>
-  <%= @post.Author %>
+  <%= @post.author %>
 </p>
 
 <p>
   <strong>Content:</strong>
   <%= @post.content %>
 </p>
-
+<h3>Comments:</h3>
 <% @post.comments.each do |comment| %>
 	<%= render 'comments/show', comment:comment %>
 <% end %>

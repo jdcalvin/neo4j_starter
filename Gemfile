@@ -27,7 +27,6 @@ group :development do
   gem 'os' 
   # for rake Neo4j Tasks
   gem 'neo4j-admin' 
-  #utilize and interface dashboard panel with rails app
 end
 
 

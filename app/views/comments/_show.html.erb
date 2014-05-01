@@ -1,14 +1,20 @@
-<p>
+<div class="comment comment-header">
+<span class="comment-author">
   <strong>Author:</strong>
   <%= comment.author %>
-</p>
-
-<p>
+</span>
+<span class="comment-email">
   <strong>Email:</strong>
   <%= comment.email %>
-</p>
+</span>
+<span class="comment-time">
+	<%= comment.created_at.strftime("%x: %I:%M %p") %>
+</span>
+</div>
 
+
+<div class="comment comment-body">
 <p>
-  <strong>Content:</strong>
   <%= comment.content %>
 </p>
+</div>
