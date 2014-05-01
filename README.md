@@ -32,8 +32,8 @@ Documentation here will serve as a guide for setting up Neo4j for future uses.
 
 ###Deploy with Heroku
 1. Modify `config/application.rb` 
-		`config.neo4j.session_type = :server_db`
-		`config.neo4j.session_path = ENV["GRAPHENEDB_URL"] ||'http://localhost:7474'`
+	`config.neo4j.session_type = :server_db`
+	`config.neo4j.session_path = ENV["GRAPHENEDB_URL"] ||'http://localhost:7474'`
 2. Ensure working application is deployed to git repo
 3. Create a new heroku application
 
