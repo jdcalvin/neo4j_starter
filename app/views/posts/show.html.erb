@@ -1,0 +1,24 @@
+
+<h3>Posted: <%= @post.created_at.strftime('%x') %>
+<p>
+  <strong>Title:</strong>
+  <%= @post.title %>
+</p>
+
+<p>
+  <strong>Author:</strong>
+  <%= @post.Author %>
+</p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @post.content %>
+</p>
+
+<% @post.comments.each do |comment| %>
+	<%= render 'comments/show', comment:comment %>
+<% end %>
+<%= render 'comments/new' %>
+
+<%= link_to 'Edit', edit_post_path(@post) %> |
+<%= link_to 'Back', posts_path %>
