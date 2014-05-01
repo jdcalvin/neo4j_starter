@@ -23,6 +23,10 @@ module Myapp
       g.orm             :neo4j
     end
 
+    #Configuration for Heroku
+    config.neo4j.session_type = :server_db 
+    config.neo4j.session_path = ENV["GRAPHENEDB_URL"] || 'http://localhost:7474'
+
     # Configure where the embedded neo4j database should exist
     # Notice embedded db is only available for JRuby
     # config.neo4j.session_type = :embedded_db  # default #server_db

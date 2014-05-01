@@ -29,6 +29,9 @@ group :development do
   gem 'neo4j-admin' 
 end
 
+group :production do
+	gem 'rails_12factor'
+end
 
 
 
