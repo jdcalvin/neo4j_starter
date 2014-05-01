@@ -3,7 +3,7 @@ README
 
 About
 ---
-A sample template application using Neo4j. Documentation here will serve as a guide for setting up Neo4j for the first time.
+A sample template application using Neo4j. Documentation here will serve as a guide for setting up Neo4j for future uses.
 
 Dependencies
 ---
