@@ -6,6 +6,9 @@ A sample template application using Rails and Neo4j. Demonstrates simple RESTful
 Documentation here will serve as a guide for setting up Neo4j for future uses.
 
 ###Dependencies
+
+Note: I have only tested this method using Ubuntu 14.04 LTS 64 bit.
+
 * Jruby 1.7.12
 * Rails 4.1
 * OpenJDK 64-Bit Server VM

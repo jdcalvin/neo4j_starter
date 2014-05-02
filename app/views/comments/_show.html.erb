@@ -1,20 +1,20 @@
 <div class="comment comment-header">
 <span class="comment-author">
   <strong>Author:</strong>
-  <%= comment.author %>
+  <%= c.author %>
 </span>
 <span class="comment-email">
   <strong>Email:</strong>
-  <%= comment.email %>
+  <%= c.email %>
 </span>
 <span class="comment-time">
-	<%= comment.created_at.strftime("%x: %I:%M %p") %>
+	<%= c.created_at.strftime("%x: %I:%M %p") %>
 </span>
 </div>
 
 
 <div class="comment comment-body">
 <p>
-  <%= comment.content %>
+  <%= c.content %>
 </p>
 </div>

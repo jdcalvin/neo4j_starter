@@ -21,6 +21,7 @@ module Myapp
     
     config.generators do |g|
       g.orm             :neo4j
+      g.test_framework  :rspec, :fixture => false
     end
 
     #Configuration for Heroku

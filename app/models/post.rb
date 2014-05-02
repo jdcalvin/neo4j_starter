@@ -5,7 +5,7 @@ class Post
     property :author, :type => String
     property :created_at
 
-    has_n :comments
+    has_n(:comments).to(Comment)
 
     index :title
 

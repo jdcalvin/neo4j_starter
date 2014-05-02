@@ -5,6 +5,7 @@ class Comment
     property :content, :type => String
     property :created_at
 
-    has_one(:post).from(:comments)    
+    has_one(:post).from(Post, :comments)    
 
+    index :author
 end
