@@ -34,9 +34,11 @@ Note: I have only tested this method using Ubuntu 14.04 LTS 64 bit.
 
 
 ###Deploy with Heroku
-1. Modify `config/application.rb` 
-		`config.neo4j.session_type = :server_db`
-		`config.neo4j.session_path = ENV["GRAPHENEDB_URL"] ||'http://localhost:7474'`
+1. Modify `config/application.rb`
+
+	`config.neo4j.session_type = :server_db`
+	`config.neo4j.session_path = ENV["GRAPHENEDB_URL"] ||'http://localhost:7474'`
+	
 2. Ensure working application is deployed to git repo
 3. Create a new heroku application
 
