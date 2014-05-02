@@ -18,3 +18,7 @@
   <%= c.content %>
 </p>
 </div>
+<div class="comment comment-footer">
+<%= link_to 'Edit', edit_post_comment_path(@post, c) %>
+<%= link_to 'Destroy', [@post, c], method: :delete, data: { confirm: 'Are you sure?' } %>
+</div>
