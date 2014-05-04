@@ -1,8 +1,7 @@
 #README
 
 
-A sample template application using Rails and Neo4j. Demonstrates simple RESTful features of a typical rails app, with the abilty to CRUD new posts and add comments to the posts.
-
+A sample template application using Rails and Neo4j. Demonstrates simple RESTful features of a typical rails app. 
 Documentation here will serve as a guide for setting up Neo4j for future uses.
 
 ###Dependencies
@@ -16,7 +15,6 @@ Note: I have only tested this method using Ubuntu 14.04 LTS 64 bit.
 
 ###Setup
 1. Clone project
-
 2. Install and switch to jruby
  
  `rvm install jruby-1.7.12`
@@ -32,12 +30,13 @@ Note: I have only tested this method using Ubuntu 14.04 LTS 64 bit.
     
     You should be able to start `rails server` and also utilize the Neo4j dashboard at `localhost:7474`
 
-
 ###Deploy with Heroku
 1. Modify `config/application.rb`
-
-	`config.neo4j.session_type = :server_db`
-	`config.neo4j.session_path = ENV["GRAPHENEDB_URL"] ||'http://localhost:7474'`
+2. 
+	```
+	config.neo4j.session_type = :server_db
+	config.neo4j.session_path = ENV["GRAPHENEDB_URL"] ||'http://localhost:7474'
+	```
 	
 2. Ensure working application is deployed to git repo
 3. Create a new heroku application
