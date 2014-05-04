@@ -1,6 +1,6 @@
 class CommentsController < ApplicationController
   before_action :set_comment, only: [:show, :edit, :update, :destroy]
-  before_action :set_post, only: [:show, :edit, :update, :destroy]
+  before_action :set_post, only: [:show, :edit, :update, :destroy, :create]
 
   def index
     @comments = Comment.all
@@ -10,11 +10,10 @@ class CommentsController < ApplicationController
   end
 
   def create
-    @comment = Comment.create!(comment_params)
-    @post.comments << @comment
-    @post.save
+    @comment = Comment.new(comment_params)
 
     if @comment.save
+      @post.comments << @comment
       redirect_to @post, notice: 'Comment was successfully created.'
     else
       render :new
