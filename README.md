@@ -48,11 +48,11 @@ Note: I have only tested this method using Ubuntu 14.04 LTS 64 bit.
 4. Push to heroku
 
     `git push heroku master`
-5. Verify database url is valid
+5. Access Neo4j Web Admin Interface
 
-	`heroku config:get GRAPHENEDB_URL`
+	open the url displayed from `heroku config:get GRAPHENEDB_URL`
 
-    You can also access the Neo4j dashboard from this url.
+	You can also access configuration options with `heroku addons:open graphenedb`
 
 
 ###Resources
@@ -62,3 +62,5 @@ Note: I have only tested this method using Ubuntu 14.04 LTS 64 bit.
 * https://devcenter.heroku.com/articles/graphenedb
 
 * http://docs.neo4j.org/
+
+* http://geekmonkey.org/articles/25-using-neo4j-with-rails-3-2
