@@ -15,7 +15,7 @@ Note: I have only tested this method using Ubuntu 14.04 LTS 64 bit.
 
 ###Setup
 
-Changes to the database schema are done through class models. Migrations are not utilized with Neo4j, and any changes made to properties via `property` in models are available.
+Changes to the database schema are done through class models. Migrations are not utilized with Neo4j, and any changes made to properties via `property` in models will be immediately available (note: this can have screwy after effects. I've always had to wipe the database if I make any `property` changes.)
 
 1. Clone project
 2. Install and switch to jruby
