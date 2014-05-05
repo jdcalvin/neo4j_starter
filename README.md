@@ -14,6 +14,9 @@ Note: I have only tested this method using Ubuntu 14.04 LTS 64 bit.
 * Neo4j.rb v3.0 (unstable alpha but seems to work so far)
 
 ###Setup
+
+Changes to the database schema are done through class models. Migrations are not utilized with Neo4j, and any changes made to properties via `property` in models are available.
+
 1. Clone project
 2. Install and switch to jruby
  
