@@ -14,6 +14,7 @@ class CommentsController < ApplicationController
 
     if @comment.save
       @post.comments << @comment
+      #No foreign keys, so have to manually push it into the :comments relation array
       redirect_to @post, notice: 'Comment was successfully created.'
     else
       render :new
