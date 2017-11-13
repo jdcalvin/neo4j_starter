@@ -1,10 +1,10 @@
-#README
+# README
 
 
 A sample template application using Rails and Neo4j. Demonstrates simple RESTful features of a typical rails app. 
 Documentation here will serve as a guide for setting up Neo4j for future uses.
 
-###Dependencies
+### Dependencies
 
 Note: I have only tested this method using Ubuntu 14.04 LTS 64 bit.
 
@@ -13,7 +13,7 @@ Note: I have only tested this method using Ubuntu 14.04 LTS 64 bit.
 * OpenJDK 64-Bit Server VM
 * Neo4j.rb v3.0 (unstable alpha but seems to work so far)
 
-###Setup
+### Setup
 
 Changes to the database schema are done through class models. Migrations are not utilized with Neo4j, and any changes made to properties via `property` in models will be immediately available (note: this can have screwy after effects. I've always had to wipe the database if I make any `property` changes.)
 
@@ -33,14 +33,12 @@ Changes to the database schema are done through class models. Migrations are not
     
     You should be able to start `rails server` and also utilize the Neo4j dashboard at `localhost:7474`
 
-###Deploy with Heroku
+### Deploy with Heroku
 1. Modify `config/application.rb`
-2. 
-	```
+	```ruby
 	config.neo4j.session_type = :server_db
 	config.neo4j.session_path = ENV["GRAPHENEDB_URL"] ||'http://localhost:7474'
 	```
-	
 2. Ensure working application is deployed to git repo
 3. Create a new heroku application
 
@@ -57,7 +55,7 @@ Changes to the database schema are done through class models. Migrations are not
 	You can also access configuration options with `heroku addons:open graphenedb`
 
 
-###Resources
+### Resources
 
 * https://github.com/andreasronge/neo4j/wiki/Neo4j-v3
 
